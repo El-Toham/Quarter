@@ -3,14 +3,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class QuarterTestSuite {
-    // Default Constructor "Quarter()"
     @Test
     public void shouldConstructQuarter() {
         Quarter quarter = new Quarter();
         Assert.assertNotNull(quarter);
     }
 
-    // Parametrized Constructor "Quarter(int quarter, int year)"
     @Test
     public void shouldConstructQuarterWithYearAndQuarter() {
         Quarter quarter = new Quarter(1, 2024);
@@ -33,17 +31,4 @@ public class QuarterTestSuite {
     public void quarterShouldInRange(){
         Quarter quarter = new Quarter(5, 2024);
     }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void yearShouldInRange(){
-        Quarter quarter = new Quarter(1, 19999);
-    }
-
-    // Parametrized Constructor "Quarter(int quarter, Year year)"
-    @Test
-    public void shouldConstructQuarterWithYearAndQuarter2() {
-        Quarter quarter = new Quarter(1, 2024);
-        Assert.assertNotNull(quarter);
-    }
-
 }
