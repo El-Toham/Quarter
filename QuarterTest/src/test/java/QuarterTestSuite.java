@@ -26,4 +26,9 @@ public class QuarterTestSuite {
         Quarter quarter = new Quarter(1, 2024);
         Assert.assertEquals(2024, quarter.getYear());
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void quarterShouldInRange(){
+        Quarter quarter = new Quarter(5, 2024);
+    }
 }
