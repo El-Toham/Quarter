@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class QuarterTestSuite {
+    // Default Constructor "Quarter()"
     @Test
     public void shouldConstructQuarter() {
         Quarter quarter = new Quarter();
