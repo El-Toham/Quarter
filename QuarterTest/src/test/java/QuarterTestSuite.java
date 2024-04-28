@@ -9,6 +9,7 @@ public class QuarterTestSuite {
         Assert.assertNotNull(quarter);
     }
 
+    // Parameterized constructor "Quarter(int quarter, int year)".
     @Test
     public void shouldConstructQuarterWithYearAndQuarter() {
         Quarter quarter = new Quarter(1, 2024);
