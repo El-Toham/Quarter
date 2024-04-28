@@ -3,6 +3,8 @@ import org.jfree.data.time.Year;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Date;
+
 public class QuarterTestSuite {
     // Default Constructor "Quarter()"
     @Test
@@ -70,5 +72,9 @@ public class QuarterTestSuite {
     }
 
     // Parameterized constructor "Quarter(Date time)".
-    
+    @Test
+    public void shouldConstructQuarterWithDate() {
+        Quarter quarter = new Quarter(new Date(2024, 1, 1));
+        Assert.assertNotNull(quarter);
+    }
 }
