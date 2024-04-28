@@ -1,4 +1,5 @@
 import org.jfree.data.time.Quarter;
+import org.jfree.data.time.Year;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -52,4 +53,9 @@ public class QuarterTestSuite {
         Assert.assertEquals(1, quarter.getQuarter());
     }
 
+    @Test
+    public void shouldGetYear2() {
+        Quarter quarter = new Quarter(1, 2024);
+        Assert.assertEquals(2024, quarter.getYear());
+    }
 }
