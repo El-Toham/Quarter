@@ -84,4 +84,9 @@ public class QuarterTestSuite {
     //*************Methods*************//
 
     // Method "getQuarter()"
+    @Test
+    public void shouldGetQuarterMethod() {
+        Quarter quarter = new Quarter(1, 2024);
+        Assert.assertEquals(1, quarter.getQuarter());
+    }
 }
