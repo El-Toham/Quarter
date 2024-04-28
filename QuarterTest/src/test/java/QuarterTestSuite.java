@@ -63,4 +63,10 @@ public class QuarterTestSuite {
     public void quarterShouldInRange2(){
         Quarter quarter = new Quarter(5, 2024);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void yearShouldInRange2(){
+        Quarter quarter = new Quarter(1, 19999);
+    }
+
 }
