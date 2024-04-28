@@ -80,4 +80,6 @@ public class QuarterTestSuite {
         Quarter quarter = new Quarter(new Date(2024, 1, 1));
         Assert.assertNotNull(quarter);
     }
+
+    //*************Methods*************//
 }
