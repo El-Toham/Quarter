@@ -6,6 +6,9 @@ import org.junit.Test;
 import java.util.Date;
 
 public class QuarterTestSuite {
+
+    //*************Constructors*************//
+
     // Default Constructor "Quarter()"
     @Test
     public void shouldConstructQuarter() {
