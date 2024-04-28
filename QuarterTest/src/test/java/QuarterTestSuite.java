@@ -46,4 +46,10 @@ public class QuarterTestSuite {
         Assert.assertNotNull(quarter);
     }
 
+    @Test
+    public void shouldGetQuarter2() {
+        Quarter quarter = new Quarter(1, 2024);
+        Assert.assertEquals(1, quarter.getQuarter());
+    }
+
 }
