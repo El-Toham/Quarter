@@ -89,4 +89,12 @@ public class QuarterTestSuite {
         Quarter quarter = new Quarter(1, 2024);
         Assert.assertEquals(1, quarter.getQuarter());
     }
+
+    // Method "getYear()"
+    @Test
+    public void shouldGetYearMethod() {
+        Quarter quarter = new Quarter(1, 2024);
+        Assert.assertEquals(2024, quarter.getYear());
+    }
+
 }
