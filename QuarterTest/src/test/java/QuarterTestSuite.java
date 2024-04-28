@@ -69,4 +69,6 @@ public class QuarterTestSuite {
         Quarter quarter = new Quarter(1, 19999);
     }
 
+    // Parameterized constructor "Quarter(Date time)".
+    
 }
