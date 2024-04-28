@@ -8,4 +8,10 @@ public class QuarterTestSuite {
         Quarter quarter = new Quarter();
         Assert.assertNotNull(quarter);
     }
+
+    @Test
+    public void shouldConstructQuarterWithYearAndQuarter() {
+        Quarter quarter = new Quarter(1, 2024);
+        Assert.assertNotNull(quarter);
+    }
 }
