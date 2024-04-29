@@ -156,7 +156,13 @@ public class QuarterTestSuite {
         expectedCalendar.set(Calendar.MILLISECOND, 999);
 
         long expectedLastMillisecond = expectedCalendar.getTimeInMillis();
-        
+
         Assert.assertEquals(expectedLastMillisecond, lastMillisecond);
+    }
+
+    @Test (expected = NullPointerException.class)
+    public void shouldThrowException(){
+        Quarter quarter = new Quarter(1, 2024);
+        quarter.getFirstMillisecond(null);
     }
 }
