@@ -104,4 +104,11 @@ public class QuarterTestSuite {
         Assert.assertEquals(2024, quarter.getYearValue());
     }
 
+    // Method "toString()"
+    @Test
+    public void shouldToStringMethod() {
+        Quarter quarter = new Quarter(1, 2024);
+        Assert.assertEquals("Q1/2024", quarter.toString());
+    }
+
 }
