@@ -111,4 +111,11 @@ public class QuarterTestSuite {
         Assert.assertEquals("Q1/2024", quarter.toString());
     }
 
+    // Method "peg(Calendar calendar)"
+    @Test(expected = NullPointerException.class)
+    public void shouldReturnExceptionWhenPegCalendar() {
+        Quarter quarter = new Quarter(1, 2024);
+        quarter.peg(null);
+    }
+
 }
