@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class QuarterTestSuite {
 
@@ -138,4 +139,24 @@ public class QuarterTestSuite {
         Assert.assertEquals(expectedLastMillisecond, quarter.getLastMillisecond());
     }
 
+
+    // Method "getFirstMillisecond(Calendar calendar)"
+    @Test
+    public void shouldReturnLastMilliSecond(){
+        Quarter quarter = new Quarter(1, 2024);
+
+        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
+
+        long lastMillisecond = quarter.getLastMillisecond(calendar);
+
+        Calendar expectedCalendar = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
+
+        expectedCalendar.set(2024, Calendar.MARCH, 31, 23, 59, 59);
+
+        expectedCalendar.set(Calendar.MILLISECOND, 999);
+
+        long expectedLastMillisecond = expectedCalendar.getTimeInMillis();
+        
+        Assert.assertEquals(expectedLastMillisecond, lastMillisecond);
+    }
 }
